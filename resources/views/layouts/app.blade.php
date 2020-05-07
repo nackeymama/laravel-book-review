@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'BookShelves') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -29,7 +29,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img class='navbar-logo' src="{{ asset('images/logo.png') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'BookShelves') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -49,11 +49,11 @@
                         </li>
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('新規登録') }}</a>
                                 </li>
                             @endif
                         @else
@@ -90,7 +90,7 @@
             @yield('content')
         </main>
         <footer class='footer p20'>
-          <small class='copyright'> &copy Laravel Book Reviews</small>
+          <small class='copyright'> &copy BookShelves 2020 All Rights Reserved.</small>
         </footer>
     </div>
 </body>
